@@ -9,7 +9,7 @@ import api from '../api';
 import colors from '../colors';
 
 import Tree from '../components/Tree';
-import Building1 from '../components/Building1';
+import { Building1, Building2, Sun, Cloud } from '../components/SVG';
 
 class Home extends Component {
   constructor(props) {
@@ -32,7 +32,6 @@ class Home extends Component {
     window.addEventListener('scroll', () => {
       const parent =document.getElementById('parallax-container');
       const children = parent.querySelectorAll('#parallax-container>div');
-      console.log(children);
       for(let i = 0; i < children.length; i++) {
         children[i].style.transform = 'translateY(-' + (window.pageYOffset * i / children.length) + 'px)';
       }
@@ -47,11 +46,20 @@ class Home extends Component {
     }
     return (
       <div className="page-container">
-        TOP
         <div id="parallax-container">
-          <div></div>
-          <div style={{ left: '30%' }}><Building1 scale={0.8}/></div>
-          <div><Building1 /></div>
+          <div>
+            <Sun style={{ top: '5%', right: '20%' }} scale={0.4} />
+          </div>
+          <div>
+            <Cloud style={{}} scale={2.0} />
+            <Cloud style={{ top: '5%', right: '30%' }} scale={2.4} />
+          </div>
+          <div>
+            <Building2 style={{ left: '30%', top: '5%' }} scale={0.3} />
+          </div>
+          <div>
+            <Building1 scale={0.5} />
+          </div>
         </div>
         <div style={{ height: '2000px' }} />
       </div>
