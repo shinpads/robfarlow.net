@@ -57,11 +57,11 @@ class Home extends Component {
             <Cloud style={{ top: '8%', right: '60%' }} scale={1.7} />
           </div>
           <div className="parallax-layer">
-            <Building2 style={{ left: '30%', top: '5%' }} scale={0.3} />
-            <Building1 style={{ left: '50%', top: '5%' }} scale={0.4} />
+            <Building2 style={{ left: '30%', top: '-15%' }} scale={0.3} />
+            <Building1 style={{ left: '70%', top: '-13%' }} scale={0.4} />
           </div>
           <div className="parallax-layer">
-            <Building1 scale={0.5} />
+            <Building1 scale={0.5} style={{ top: '-20%' }} />
           </div>
           <div className="parallax-layer">
             <div style={{

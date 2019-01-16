@@ -96,6 +96,10 @@ svg {
   outline: 0;
 }
 
+.menu-button-title {
+  flex-grow: 1;
+}
+
 .noselect {
   -webkit-touch-callout: none;
     -webkit-user-select: none;
