@@ -9,6 +9,7 @@ import api from '../api';
 import colors from '../colors';
 
 import Tree from '../components/Tree';
+import Menu from '../components/Menu';
 import { Building1, Building2, Sun, Cloud } from '../components/SVG';
 
 class Home extends Component {
@@ -36,8 +37,8 @@ class Home extends Component {
         children[i].style.transform = 'translateY(-' + (window.pageYOffset * i / children.length) + 'px)';
       }
     }, false);
-  }
 
+  }
   render() {
     if (this.state.loading) {
       return (
@@ -53,12 +54,24 @@ class Home extends Component {
           <div>
             <Cloud style={{}} scale={2.0} />
             <Cloud style={{ top: '5%', right: '30%' }} scale={2.4} />
+            <Cloud style={{ top: '15%', right: '10%' }} scale={2.1} />
+            <Cloud style={{ top: '8%', right: '60%' }} scale={1.7} />
           </div>
           <div>
             <Building2 style={{ left: '30%', top: '5%' }} scale={0.3} />
+            <Building1 style={{ left: '50%', top: '5%' }} scale={0.4} />
           </div>
           <div>
             <Building1 scale={0.5} />
+          </div>
+          <div>
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
+              <Menu />
+            </div>
           </div>
         </div>
         <div style={{ height: '2000px' }} />

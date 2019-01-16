@@ -1,8 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" height="300" width="300">
-  <polygon points="0,150 150,0 300,150 150,300" width="500" height="1200" style="fill:#cfbc14"/>
-  <polygon points="45,45 255,45 255,255 45, 255" width="500" height="1200" style="fill:#cfbc14"/>
+  <polygon points="0,150 150,0 300,150 150,300" width="500" height="1200" style="fill:#d6c31b"/>
+  <polygon points="45,45 255,45 255,255 45, 255" width="500" height="1200" style="fill:#d6c31b"/>
 
-  <circle  cx="150" cy="150" r="130" fill="#dbc81a"/>
+  <circle  cx="150" cy="150" r="122" fill="rgba(#212121, 0.12)" opacity="0.1"/>
+  <circle  cx="150" cy="150" r="120" fill="#f2df32"/>
 
 
 
