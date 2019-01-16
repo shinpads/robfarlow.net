@@ -32,12 +32,11 @@ class Home extends Component {
     });
     window.addEventListener('scroll', () => {
       const parent =document.getElementById('parallax-container');
-      const children = parent.querySelectorAll('#parallax-container>div');
+      const children = parent.querySelectorAll('#parallax-container>.parallax-layer');
       for(let i = 0; i < children.length; i++) {
         children[i].style.transform = 'translateY(-' + (window.pageYOffset * i / children.length) + 'px)';
       }
     }, false);
-
   }
   render() {
     if (this.state.loading) {
@@ -48,27 +47,29 @@ class Home extends Component {
     return (
       <div className="page-container">
         <div id="parallax-container">
-          <div>
-            <Sun style={{ top: '5%', right: '20%' }} scale={0.4} />
+          <div className="parallax-layer">
+            <Sun style={{ top: '-5%', right: '0%' }} scale={0.4} />
           </div>
-          <div>
+          <div className="parallax-layer">
             <Cloud style={{}} scale={2.0} />
             <Cloud style={{ top: '5%', right: '30%' }} scale={2.4} />
             <Cloud style={{ top: '15%', right: '10%' }} scale={2.1} />
             <Cloud style={{ top: '8%', right: '60%' }} scale={1.7} />
           </div>
-          <div>
+          <div className="parallax-layer">
             <Building2 style={{ left: '30%', top: '5%' }} scale={0.3} />
             <Building1 style={{ left: '50%', top: '5%' }} scale={0.4} />
           </div>
-          <div>
+          <div className="parallax-layer">
             <Building1 scale={0.5} />
           </div>
-          <div>
+          <div className="parallax-layer">
             <div style={{
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
+              width: '100%',
+              height: '100%',
             }}>
               <Menu />
             </div>

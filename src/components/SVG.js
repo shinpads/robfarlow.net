@@ -11,6 +11,7 @@ export const Building1 = ({
   style = {},
 }) => {
   style.transform = `scale(${scale})`;
+  style.position = 'fixed';
   return (
     <div style={style}>
       <object data={Building1Svg} type="image/svg+xml">
@@ -26,6 +27,7 @@ export const Building2 = ({
   style = {},
 }) => {
   style.transform = `scale(${scale})`;
+  style.position = 'fixed';
   return (
     <div style={style}>
       <object data={Building2Svg} type="image/svg+xml">
@@ -44,6 +46,7 @@ export const Sun = ({
   style.height = 'fit-content';
   style.transform = `scale(${scale})`;
   style.width = 'fit-content';
+  style.position = 'fixed';
 
   return (
     <div style={style}>
@@ -64,6 +67,7 @@ export const Cloud = ({
 
   style.height = 100 * scale + 'px';
   style.width = 100 * scale + 'px';
+  style.position = 'fixed';
 
   return (
     <div style={style}>
