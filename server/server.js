@@ -36,6 +36,6 @@ app.get('*', (req, res, next) => {
   next();
 });
 
-app.listen(5000, () => {
-  log('listening on port 5000');
+app.listen(3000, () => {
+  log('listening on port 3000');
 });

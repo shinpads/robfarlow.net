@@ -10,7 +10,7 @@ import colors from '../colors';
 
 import Tree from '../components/Tree';
 import Menu from '../components/Menu';
-import { Building1, Building2, Sun, Cloud } from '../components/SVG';
+import { Building1, Building2, Building3, Mountain, Sun, Cloud } from '../components/SVG';
 
 class Home extends Component {
   constructor(props) {
@@ -51,16 +51,20 @@ class Home extends Component {
             <Sun style={{ top: '-5%', right: '0%' }} scale={0.4} />
           </div>
           <div className="parallax-layer">
+            <Mountain scale={0.7} style={{ top: '0%', left:'0%' }}/>
+          </div>
+          <div className="parallax-layer">
             <Cloud style={{}} scale={2.0} />
             <Cloud style={{ top: '5%', right: '30%' }} scale={2.4} />
             <Cloud style={{ top: '15%', right: '10%' }} scale={2.1} />
             <Cloud style={{ top: '8%', right: '60%' }} scale={1.7} />
           </div>
           <div className="parallax-layer">
-            <Building2 style={{ left: '30%', top: '-15%' }} scale={0.3} />
+            <Building2 style={{ left: '20%', top: '-15%' }} scale={0.3} />
             <Building1 style={{ left: '70%', top: '-13%' }} scale={0.4} />
           </div>
           <div className="parallax-layer">
+            <Building3 scale={0.45} style={{ top: '-40%', left: '40%'}} />
             <Building1 scale={0.5} style={{ top: '-20%' }} />
           </div>
           <div className="parallax-layer">
