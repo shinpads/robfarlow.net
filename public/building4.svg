@@ -2,7 +2,7 @@
 
   <polygon points="243,75 250,0 257,75" />
   <rect x="210" y="75" width="80" height="30" fill="#b0a697"/>
-  <polygon points="100,100 400,100 250,1500" fill="#0d4a5b"/>
+  <polygon points="100,100 400,100 250,1500" fill="#327688"/>
   <rect x="100" y="120" width="300" height="2" fill="#ffffffa0"/>
   <rect x="100" y="140" width="300" height="2" fill="#ffffffa0"/>
   <rect x="100" y="160" width="300" height="2" fill="#ffffffa0"/>
@@ -75,6 +75,6 @@
 
   <polygon points="100,100 0,1500 250,1500" fill="#0f4554"/>
   <!-- <rect x="-40" y="1480" width="300" height="2" fill="#ffffffa0" transform="rotate(-1)"/> -->
-  <polygon points="400,100 500,1500 250,1500" fill="#225a6a"/>
+  <polygon points="400,100 500,1500 250,1500" fill="#5c9aac"/>
 
 </svg>

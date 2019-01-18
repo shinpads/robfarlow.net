@@ -10,13 +10,14 @@ import colors from '../colors';
 
 import Tree from '../components/Tree';
 import Menu from '../components/Menu';
-import { Building1, Building2, Building3, Mountain, Sun, Cloud } from '../components/SVG';
+import { Building1, Building2, Building3, Building4, Mountain, Sun, Cloud } from '../components/SVG';
+import Spinner from '../components/Spinner';
 
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      loading: true,
     };
     window.scrollTo(0, 0);
   }
@@ -37,13 +38,11 @@ class Home extends Component {
         children[i].style.transform = 'translateY(-' + (window.pageYOffset * i / children.length) + 'px)';
       }
     }, false);
+    setTimeout(() => {
+      this.setState({ loading: false });
+    }, 2500);
   }
   render() {
-    if (this.state.loading) {
-      return (
-        <Spinner />
-      )
-    }
     return (
       <div className="page-container">
         <div id="parallax-container">
@@ -51,21 +50,23 @@ class Home extends Component {
             <Sun style={{ top: '-5%', right: '0%' }} scale={0.4} />
           </div>
           <div className="parallax-layer">
-            <Mountain scale={0.7} style={{ top: '0%', left:'0%' }}/>
+            <Mountain scale={0.5} style={{ top: '10%', left:'0%' }}/>
           </div>
           <div className="parallax-layer">
-            <Cloud style={{}} scale={2.0} />
-            <Cloud style={{ top: '5%', right: '30%' }} scale={2.4} />
-            <Cloud style={{ top: '15%', right: '10%' }} scale={2.1} />
-            <Cloud style={{ top: '8%', right: '60%' }} scale={1.7} />
+            <Cloud style={{}} scale={2.3} />
+            <Cloud style={{ top: '5%', right: '30%' }} scale={2.8} />
+            <Cloud style={{ top: '15%', right: '10%' }} scale={2.5} />
+            <Cloud style={{ top: '8%', right: '60%' }} scale={2.2} />
           </div>
           <div className="parallax-layer">
             <Building2 style={{ left: '20%', top: '-15%' }} scale={0.3} />
-            <Building1 style={{ left: '70%', top: '-13%' }} scale={0.4} />
+            <Building1 style={{ left: '55%', top: '-13%' }} scale={0.4} />
+            <Building4 style={{ left: '65%' }} scale={0.5} />
           </div>
           <div className="parallax-layer">
             <Building3 scale={0.45} style={{ top: '-40%', left: '40%'}} />
             <Building1 scale={0.5} style={{ top: '-20%' }} />
+            <Building2 style={{ left: '80%', top: '-30%' }} scale={0.4} />
           </div>
           <div className="parallax-layer">
             <div style={{
@@ -80,6 +81,9 @@ class Home extends Component {
           </div>
         </div>
         <div style={{ height: '2000px' }} />
+        <div className={'page-loader' + (this.state.loading ? '' : ' not-loading')}>
+          <Spinner />
+        </div>
       </div>
     );
   }
