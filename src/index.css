@@ -41,13 +41,17 @@ svg {
 
 .menu-container {
   background-color: #000000a3;
-  width: 35% !important;
+  width: 35%;
   height: fit-content !important;
   position: relative !important;
   padding: 1rem;
   border-radius: 1rem;
   font-family: Roboto;
   padding-bottom: 3rem;
+}
+
+.menu-container.mobile {
+  width: 90%;
 }
 
 .menu-container .title {

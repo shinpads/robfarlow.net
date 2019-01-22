@@ -13,8 +13,9 @@ class Menu extends Component {
   }
 
   render() {
+    const isMobile = window.innerWidth < 800;
     return (
-      <div className="menu-container">
+      <div className={'menu-container' + (isMobile ? ' mobile' : '')}>
         <h1 className="title noselect">Rob Farlow</h1>
         <button className="menu-button">
           <div className="menu-button-title">About</div>
