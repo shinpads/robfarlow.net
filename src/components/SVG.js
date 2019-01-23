@@ -4,17 +4,22 @@ import Building1Svg from '../../public/building1.svg';
 import Building2Svg from '../../public/building2.svg';
 import Building3Svg from '../../public/building3.svg';
 import Building4Svg from '../../public/building4.svg';
+import Building5Svg from '../../public/building5.svg';
 import MountainSvg from '../../public/mountain.svg';
 import SunSvg from '../../public/sun.svg';
 import CloudSvg from '../../public/cloud.svg';
 
 export const Building1 = ({
   color,
-  scale,
+  scale = 1,
   style = {},
+  top = 0,
 }) => {
+  scale *= getScale();
+  top -= (1 - getScale()) * 60;
+  style.top = `${top}%`;
   style.transform = `scale(${scale})`;
-  style.position = 'fixed';
+  style.position = 'absolute';
   return (
     <div style={style}>
       <object data={Building1Svg} type="image/svg+xml">
@@ -26,11 +31,15 @@ export const Building1 = ({
 
 export const Building2 = ({
   color,
-  scale,
+  scale = 1,
   style = {},
+  top = 0,
 }) => {
+  scale *= getScale();
+  top -= (1 - getScale()) * 60;
+  style.top = `${top}%`;
   style.transform = `scale(${scale})`;
-  style.position = 'fixed';
+  style.position = 'absolute';
   return (
     <div style={style}>
       <object data={Building2Svg} type="image/svg+xml">
@@ -42,11 +51,15 @@ export const Building2 = ({
 
 export const Building3 = ({
   color,
-  scale,
+  scale = 1,
+  top = 0,
   style = {},
 }) => {
+  scale *= getScale();
+  top -= (1 - getScale()) * 60;
+  style.top = `${top}%`;
   style.transform = `scale(${scale})`;
-  style.position = 'fixed';
+  style.position = 'absolute';
   return (
     <div style={style}>
       <object data={Building3Svg} type="image/svg+xml">
@@ -58,11 +71,15 @@ export const Building3 = ({
 
 export const Building4 = ({
   color,
-  scale,
+  scale = 1,
   style = {},
+  top = 0,
 }) => {
+  scale *= getScale();
+  top -= (1 - getScale()) * 60;
+  style.top = `${top}%`;
   style.transform = `scale(${scale})`;
-  style.position = 'fixed';
+  style.position = 'absolute';
   return (
     <div style={style}>
       <object data={Building4Svg} type="image/svg+xml">
@@ -72,16 +89,37 @@ export const Building4 = ({
   );
 };
 
-export const Sun = ({
+export const Building5 = ({
   color,
-  scale,
+  scale = 1,
+  top = 0,
   style = {},
 }) => {
+  scale *= getScale();
+  top -= (1 - getScale()) * 60;
+  style.top = `${top}%`;
+  style.transform = `scale(${scale})`;
+  style.position = 'absolute';
+  return (
+    <div style={style}>
+      <object data={Building5Svg} type="image/svg+xml">
+        <img src={Building5Svg} />
+      </object>
+    </div>
+  );
+};
+
+export const Sun = ({
+  color,
+  scale = 1,
+  style = {},
+}) => {
+  scale *= getScale();
 
   style.height = 'fit-content';
   style.transform = `scale(${scale})`;
   style.width = 'fit-content';
-  style.position = 'fixed';
+  style.position = 'absolute';
 
   return (
     <div style={style}>
@@ -96,13 +134,14 @@ export const Sun = ({
 
 export const Cloud = ({
   color,
-  scale,
+  scale = 1,
   style = {},
 }) => {
+  scale *= getScale();
 
   style.height = 100 * scale + 'px';
   style.width = 100 * scale + 'px';
-  style.position = 'fixed';
+  style.position = 'absolute';
 
   return (
     <div style={style}>
@@ -117,11 +156,12 @@ export const Cloud = ({
 
 export const Mountain = ({
   color,
-  scale,
+  scale = 1,
   style = {},
 }) => {
+  scale *= getScale();
   style.transform = `scale(${scale})`;
-  style.position = 'fixed';
+  style.position = 'absolute';
   return (
     <div style={style}>
       <object data={MountainSvg} type="image/svg+xml">
@@ -129,4 +169,18 @@ export const Mountain = ({
       </object>
     </div>
   );
+}
+
+function getScale() {
+  let scale = 1;
+  if (window.innerWidth < 800) {
+    scale *= 1.5;
+  }
+  const wh = window.innerWidth / window.innerHeight;
+  const twh = 1400 / 800;
+  if (wh < twh) {
+    return scale * window.innerWidth / 1400;
+  } else {
+    return scale * 1.1 * 800 / window.innerHeight;
+  }
 }

@@ -18,19 +18,19 @@ class Menu extends Component {
       <div className={'menu-container' + (isMobile ? ' mobile' : '')}>
         <h1 className="title noselect">Rob Farlow</h1>
         <button className="menu-button">
-          <div className="menu-button-title">About</div>
+          <div className="menu-button-title noselect">About</div>
           <PersonIcon />
         </button>
         <button className="menu-button">
-          <div className="menu-button-title">Projects</div>
+          <div className="menu-button-title noselect">Projects</div>
           <ComputerIcon />
         </button>
         <button className="menu-button">
-          <div className="menu-button-title">Games</div>
+          <div className="menu-button-title noselect">Games</div>
           <VideogameAssetIcon />
         </button>
         <button className="menu-button">
-          <div className="menu-button-title">Contact</div>
+          <div className="menu-button-title noselect">Contact</div>
           <EmailIcon />
         </button>
       </div>

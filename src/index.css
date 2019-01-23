@@ -7,14 +7,13 @@ html, body {
 
 #parallax-container {
   display: block;
-  height: 750px;
   background-color: lightskyblue;
   clip: rect(auto, auto, auto, auto);
   position:absolute;
   left: 0;
   top: 0;
   width: 100%;
-  height: 110%;
+  height: 100%;
 }
 
 #parallax-container > div {
@@ -164,7 +163,7 @@ svg {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #ffffff;
+  background-color: #a6a6a6;
   -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
           animation: sk-foldCubeAngle 2.4s infinite linear both;
   -webkit-transform-origin: 100% 100%;
@@ -231,7 +230,7 @@ svg {
 .page-loader {
   width: 100%;
   height: -webkit-fill-available;
-  background-color: #277f88;
+  background-color: #ffffff;
   opacity: 1;
   transition: opacity 600ms ease;
   display: flex;
@@ -245,4 +244,76 @@ svg {
 .page-loader.not-loading {
   opacity: 0;
   pointer-events: none;
+}
+
+#about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #fff;
+  justify-content: space-around;
+}
+
+#projects-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #e8e8e8;
+  justify-content: space-around;
+}
+
+#title-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #19b5ff;
+  justify-content: center;
+  height: 100vh;
+  color: white;
+}
+
+.hr {
+  height: 3px;
+  width: 50px;
+  background-color: #4c4c4c;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.fullhr {
+  height: 1px;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+
+.project-card {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.devtool-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
