@@ -18,6 +18,7 @@ import AndroidStudioIcon from '../../public/android.png';
 
 class Projects extends Component {
   render() {
+    const isMobile = window.innerWidth < 800;
     return(
       <div id="projects-section">
         <Fade>
@@ -46,7 +47,7 @@ class Projects extends Component {
           }}>
             Some of the projects I have made <br />
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr 1fr' }}>
             <Fade bottom>
               <Paper className="project-card">
                 <div style={{ marginBottom: '1rem' }}>
