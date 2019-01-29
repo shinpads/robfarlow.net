@@ -266,6 +266,16 @@ svg {
   justify-content: space-around;
 }
 
+#games-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #e8e8e8;
+  justify-content: space-around;
+}
+
 #title-section {
   display: flex;
   flex-direction: column;

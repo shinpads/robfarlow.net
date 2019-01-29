@@ -3,6 +3,8 @@ import PersonIcon from '@material-ui/icons/Person';
 import Fade from 'react-reveal/Fade';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
+import LinkedInIcon from '../../public/linkedin.png'
+import GithubIcon from '../../public/github.png'
 
 const styles = {
   button: {
@@ -16,6 +18,9 @@ class TitleSection extends Component {
     const { classes } = this.props;
     return(
       <div id="title-section">
+        <div>
+          <img src={LinkedInIcon} width={24} height={24}/>
+        </div>
           <div style={{
             textTransform: 'uppercase',
             fontWeight: '600',
