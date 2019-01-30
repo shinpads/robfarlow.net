@@ -23,8 +23,8 @@
     "react-scripts": "2.1.1"
   },
   "scripts": {
-    "start:dev": "NODE_ENV=production DEBUG=robfarlow.com:* npm run build && node ./dist/server.js",
-    "start": "npm run build:dev && NODE_ENV=production DEBUG=robfarlow.com:* node ./dist/server.js",
+    "start:dev": "NODE_ENV=production DEBUG=robfarlow.net:* npm run build && node ./dist/server.js",
+    "start": "npm run build:dev && NODE_ENV=production DEBUG=robfarlow.net:* node ./dist/server.js",
     "build": "webpack --mode production --config webpack.server.config.js & webpack --mode production --config webpack.prod.config.js",
     "build:dev": "webpack --mode development --config webpack.server.config.js & webpack --mode development --config webpack.dev.config.js",
     "test": "react-scripts test",

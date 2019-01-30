@@ -272,7 +272,7 @@ svg {
   align-items: center;
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: #e8e8e8;
+  background-color: #bde1ff;
   justify-content: space-around;
 }
 
@@ -327,4 +327,18 @@ svg {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.top-icon {
+  cursor: pointer;
+  transition: transform 100ms ease-in;
+  transform: scale(1.4) rotate(0deg);
+}
+
+.top-icon:hover {
+  transform: scale(1.7) rotate(0deg);
+}
+
+.top-icon:active {
+  transform: scale(1.3) rotate(15deg);
 }

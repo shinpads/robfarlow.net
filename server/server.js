@@ -7,11 +7,10 @@ const path = require('path');
 const session = require('express-session');
 const database = require('./database');
 
-const log = debug('robfarlow.com:sever');
+const log = debug('robfarlow.net:sever');
 
 const app = express();
 const html = path.join(__dirname, 'index.html');
-
 
 app.use(express.static(__dirname));
 app.use(bodyParser.json());
@@ -30,11 +29,12 @@ app.get('/', (req, res, next) => {
   next();
 });
 
-app.get('*', (req, res, next) => {
+app.post('/log-visit', (req, res) => {
   const now = new Date();
   log('connection', req.ip, `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`);
-  next();
+  res.send({ success: true });
 });
+
 
 app.listen(3000, () => {
   log('listening on port 3000');

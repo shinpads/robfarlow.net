@@ -4,6 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import Divider from '@material-ui/core/Divider';
 import Fade from 'react-reveal/Fade';
 import Button from '@material-ui/core/Button';
+import Tooltip from '@material-ui/core/Tooltip';
 
 import DotsPattern from '../../public/dotspattern.jpg';
 import MasonLogo from '../../public/masonlogo.png';
@@ -48,7 +49,7 @@ class Projects extends Component {
             Some of the projects I have made <br />
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr 1fr' }}>
-            <Fade bottom>
+            <Fade delay={100} bottom>
               <Paper className="project-card">
                 <div style={{ marginBottom: '1rem' }}>
                   <img src={MasonLogo} width={100} height={100} />
@@ -63,18 +64,26 @@ class Projects extends Component {
                   Mason-Jar Launcher
                 </div>
                 <div className="flexbox">
-                  <div className="devtool-icon">
-                    <img width={24} height={24} src={ReactIcon}/>
-                  </div>
-                  <div className="devtool-icon">
-                    <img width={20} height={20} src={ElectronIcon}/>
-                  </div>
-                  <div className="devtool-icon">
-                    <img width={32} height={32} src={NodeIcon}/>
-                  </div>
-                  <div className="devtool-icon">
-                    <img width={24} height={24} src={MongoIcon}/>
-                  </div>
+                  <Tooltip title="React">
+                    <div className="devtool-icon">
+                      <img width={24} height={24} src={ReactIcon}/>
+                    </div>
+                  </Tooltip>
+                    <Tooltip title="Electron">
+                    <div className="devtool-icon">
+                      <img width={20} height={20} src={ElectronIcon}/>
+                    </div>
+                  </Tooltip>
+                    <Tooltip title="Node">
+                    <div className="devtool-icon">
+                      <img width={32} height={32} src={NodeIcon}/>
+                    </div>
+                  </Tooltip>
+                    <Tooltip title="MongoDB">
+                    <div className="devtool-icon">
+                      <img width={24} height={24} src={MongoIcon}/>
+                    </div>
+                  </Tooltip>
                 </div>
                 <div className="fullhr" />
                 This is asdklalsdkjalskdj
@@ -85,10 +94,17 @@ class Projects extends Component {
                   alignItems: 'center',
                   justifyContent: 'flex-end',
                 }}>
-                  <Button style={{ marginRight: '0.5rem' }}>github</Button>
+                  <Button
+                    style={{ marginRight: '0.5rem' }}
+                    onClick={() => window.open('https://github.com/marshmelllo/masonjar-launcher')}
+                  >
+                    github
+                  </Button>
                   <Button variant="outlined">Try it</Button>
                 </div>
               </Paper>
+            </Fade>
+            <Fade delay={300} bottom>
               <Paper className="project-card">
               <div style={{ marginBottom: '1rem' }}>
               <img src={ResonateLogo} width={100} height={100} />
@@ -103,15 +119,21 @@ class Projects extends Component {
               Resonate
               </div>
               <div className="flexbox">
-                <div className="devtool-icon">
-                  <img width={24} height={24} src={AndroidStudioIcon}/>
-                </div>
-                <div className="devtool-icon">
-                  <img width={24} height={24} src={SqlIcon}/>
-                </div>
-                <div className="devtool-icon">
-                  <img width={22} height={22} src={GoogleMapsIcon}/>
-                </div>
+                <Tooltip title="Android">
+                  <div className="devtool-icon">
+                    <img width={24} height={24} src={AndroidStudioIcon}/>
+                  </div>
+                </Tooltip>
+                  <Tooltip title="SQL">
+                  <div className="devtool-icon">
+                    <img width={24} height={24} src={SqlIcon}/>
+                  </div>
+                </Tooltip>
+                  <Tooltip title="Google Maps">
+                  <div className="devtool-icon">
+                    <img width={22} height={22} src={GoogleMapsIcon}/>
+                  </div>
+                </Tooltip>
               </div>
               <div className="fullhr" />
               This is asdklalsdkjalskdj
@@ -122,10 +144,16 @@ class Projects extends Component {
                 alignItems: 'center',
                 justifyContent: 'flex-end',
               }}>
-              <Button style={{ marginRight: '0.5rem' }}>github</Button>
-              <Button disabled variant="outlined">Try it</Button>
+              <Button
+                style={{ marginRight: '0.5rem' }}
+                onClick={() => window.open('https://github.com/marshmelllo/resonate')}
+              >
+                github
+              </Button>
               </div>
               </Paper>
+            </Fade>
+            <Fade delay={500} bottom>
               <Paper className="project-card">
                 <div style={{ marginBottom: '1rem' }}>
                   <img src={MasonLogo} width={100} height={100} />
@@ -140,12 +168,16 @@ class Projects extends Component {
                   robfarlow.net
                 </div>
                 <div className="flexbox">
-                  <div className="devtool-icon">
-                    <img width={24} height={24} src={ReactIcon}/>
-                  </div>
-                  <div className="devtool-icon">
-                    <img width={32} height={32} src={NodeIcon}/>
-                  </div>
+                  <Tooltip title="React">
+                    <div className="devtool-icon">
+                      <img width={24} height={24} src={ReactIcon}/>
+                    </div>
+                  </Tooltip>
+                    <Tooltip title="Node">
+                    <div className="devtool-icon">
+                      <img width={32} height={32} src={NodeIcon}/>
+                    </div>
+                  </Tooltip>
                 </div>
                 <div className="fullhr" />
                 This is asdklalsdkjalskdj
@@ -156,8 +188,13 @@ class Projects extends Component {
                   alignItems: 'center',
                   justifyContent: 'flex-end',
                 }}>
-                  <Button style={{ marginRight: '0.5rem' }}>github</Button>
-                  <Button variant="outlined">Try it</Button>
+                  <Button
+                    style={{ marginRight: '0.5rem' }}
+                    onClick={() => window.open('https://github.com/marshmelllo/robfarlow.net')}
+                  >
+                    github
+                  </Button>
+                  <Button onClick={() => window.location.reload()} variant="outlined">Try it</Button>
                 </div>
               </Paper>
             </Fade>

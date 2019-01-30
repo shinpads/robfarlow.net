@@ -3,8 +3,8 @@ import PersonIcon from '@material-ui/icons/Person';
 import Fade from 'react-reveal/Fade';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
-import LinkedInIcon from '../../public/linkedin.png'
-import GithubIcon from '../../public/github.png'
+import LinkedInIcon from '../../public/linkedin.svg'
+import GithubIcon from '../../public/github.svg'
 
 const styles = {
   button: {
@@ -18,8 +18,35 @@ class TitleSection extends Component {
     const { classes } = this.props;
     return(
       <div id="title-section">
-        <div>
-          <img src={LinkedInIcon} width={24} height={24}/>
+        <div
+          onClick={() => window.open('https://www.linkedin.com/in/robfarlow/')}
+        >
+          <img
+            className="top-icon"
+            style={{
+              position: 'absolute',
+              top: '1rem',
+              right: '4rem',
+            }}
+            src={LinkedInIcon}
+            width={24}
+            height={24}
+          />
+        </div>
+          <div
+            onClick={() => window.open('https://github.com/marshmelllo')}
+          >
+          <img
+            className="top-icon"
+            style={{
+              position: 'absolute',
+              top: '1rem',
+              right: '1rem',
+            }}
+            src={GithubIcon}
+            width={24}
+            height={24}
+          />
         </div>
           <div style={{
             textTransform: 'uppercase',
