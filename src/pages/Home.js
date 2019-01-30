@@ -15,6 +15,7 @@ import TitleSection from '../components/TitleSection';
 import About from '../components/About';
 import Projects from '../components/Projects';
 import Games from '../components/Games';
+import Footer from '../components/Footer';
 import Spinner from '../components/Spinner';
 
 class Home extends Component {
@@ -92,6 +93,7 @@ class Home extends Component {
         <About />
         <Projects />
         <Games />
+        <Footer />
         <div className={'page-loader' + (this.state.loading ? '' : ' not-loading')}>
           <Spinner />
         </div>

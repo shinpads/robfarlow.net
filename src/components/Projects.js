@@ -86,7 +86,8 @@ class Projects extends Component {
                   </Tooltip>
                 </div>
                 <div className="fullhr" />
-                This is asdklalsdkjalskdj
+                Mason-Jar launcher is a downloader/updater for all of the games
+                I have worked on.
                 <div className="fullhr" />
                 <div style={{
                   width: '100%',
@@ -136,7 +137,8 @@ class Projects extends Component {
                 </Tooltip>
               </div>
               <div className="fullhr" />
-              This is asdklalsdkjalskdj
+              Resonate was a mobile app that was designed to allow users
+              to discover local bands or shows in their area.
               <div className="fullhr" />
               <div style={{
                 width: '100%',
@@ -180,7 +182,8 @@ class Projects extends Component {
                   </Tooltip>
                 </div>
                 <div className="fullhr" />
-                This is asdklalsdkjalskdj
+                This is my personal website. I designed it using some Material-UI
+                assets.
                 <div className="fullhr" />
                 <div style={{
                   width: '100%',

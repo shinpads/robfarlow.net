@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ComputerIcon from '@material-ui/icons/Computer';
+import GamesIcon from '@material-ui/icons/Games';
 import Paper from '@material-ui/core/Paper';
 import Divider from '@material-ui/core/Divider';
 import Fade from 'react-reveal/Fade';
@@ -35,132 +35,23 @@ class Games extends Component {
             color: '#232323',
             marginRight: '1rem',
           }}>
-          <ComputerIcon />
+          <GamesIcon />
           </div>
             Games
           </div>
           <div className="hr" />
           <div style={{
-            color: '#808080',
+            color: '#rgb(45, 45, 45)',
             textAlign: 'center',
             marginBottom: '1rem',
           }}>
-            Some of the projects I have made <br />
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr 1fr' }}>
-            <Fade bottom>
-              <Paper className="project-card">
-                <div style={{ marginBottom: '1rem' }}>
-                  <img src={MasonLogo} width={100} height={100} />
-                </div>
-                <div style={{
-                  textTransform: 'uppercase',
-                  fontWeight: '600',
-                  fontSize: '18px',
-                  color: '#404040',
-                  marginBottom: '1rem',
-                }}>
-                  Mason-Jar Launcher
-                </div>
-                <div className="flexbox">
-                  <div className="devtool-icon">
-                    <img width={24} height={24} src={ReactIcon}/>
-                  </div>
-                  <div className="devtool-icon">
-                    <img width={20} height={20} src={ElectronIcon}/>
-                  </div>
-                  <div className="devtool-icon">
-                    <img width={32} height={32} src={NodeIcon}/>
-                  </div>
-                  <div className="devtool-icon">
-                    <img width={24} height={24} src={MongoIcon}/>
-                  </div>
-                </div>
-                <div className="fullhr" />
-                This is asdklalsdkjalskdj
-                <div className="fullhr" />
-                <div style={{
-                  width: '100%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'flex-end',
-                }}>
-                  <Button style={{ marginRight: '0.5rem' }}>github</Button>
-                  <Button variant="outlined">Try it</Button>
-                </div>
-              </Paper>
-              <Paper className="project-card">
-              <div style={{ marginBottom: '1rem' }}>
-              <img src={ResonateLogo} width={100} height={100} />
-              </div>
-              <div style={{
-                textTransform: 'uppercase',
-                fontWeight: '600',
-                fontSize: '18px',
-                color: '#404040',
-                marginBottom: '1rem',
-              }}>
-              Resonate
-              </div>
-              <div className="flexbox">
-                <div className="devtool-icon">
-                  <img width={24} height={24} src={AndroidStudioIcon}/>
-                </div>
-                <div className="devtool-icon">
-                  <img width={24} height={24} src={SqlIcon}/>
-                </div>
-                <div className="devtool-icon">
-                  <img width={22} height={22} src={GoogleMapsIcon}/>
-                </div>
-              </div>
-              <div className="fullhr" />
-              This is asdklalsdkjalskdj
-              <div className="fullhr" />
-              <div style={{
-                width: '100%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'flex-end',
-              }}>
-              <Button style={{ marginRight: '0.5rem' }}>github</Button>
-              <Button disabled variant="outlined">Try it</Button>
-              </div>
-              </Paper>
-              <Paper className="project-card">
-                <div style={{ marginBottom: '1rem' }}>
-                  <img src={MasonLogo} width={100} height={100} />
-                </div>
-                <div style={{
-                  textTransform: 'uppercase',
-                  fontWeight: '600',
-                  fontSize: '18px',
-                  color: '#404040',
-                  marginBottom: '1rem',
-                }}>
-                  robfarlow.net
-                </div>
-                <div className="flexbox">
-                  <div className="devtool-icon">
-                    <img width={24} height={24} src={ReactIcon}/>
-                  </div>
-                  <div className="devtool-icon">
-                    <img width={32} height={32} src={NodeIcon}/>
-                  </div>
-                </div>
-                <div className="fullhr" />
-                This is asdklalsdkjalskdj
-                <div className="fullhr" />
-                <div style={{
-                  width: '100%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'flex-end',
-                }}>
-                  <Button style={{ marginRight: '0.5rem' }}>github</Button>
-                  <Button variant="outlined">Try it</Button>
-                </div>
-              </Paper>
-            </Fade>
+            Heres a showcase of all of  my games. <br />
+            All of them are available to play on the
+            <a style={{
+              cursor: 'pointer',
+              fontWeight: 600,
+              color: '#1d4b87',
+            }}> Mason-Jar Launcher</a> <br />
           </div>
         </Fade>
       </div>
