@@ -4,7 +4,6 @@ const debug = require('debug');
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const session = require('express-session');
 const database = require('./database');
 
 const log = debug('robfarlow.net:sever');
@@ -17,12 +16,7 @@ app.use(bodyParser.json());
 app.use('/static', express.static(__dirname));
 app.use('*/js',express.static(__dirname));
 app.enable('trust proxy', true);
-app.use(session({
-  secret: process.env.SESSION_SECRET_KEY,
-  resave: false,
-  saveUninitialized: true,
-  cookie: { secure: false },
-}));
+
 
 app.get('/', (req, res, next) => {
   res.sendFile(html);
