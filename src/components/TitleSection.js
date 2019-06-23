@@ -18,23 +18,8 @@ class TitleSection extends Component {
     const { classes } = this.props;
     return(
       <div id="title-section">
-        <div
-          onClick={() => window.open('https://www.linkedin.com/in/robfarlow/')}
-        >
-          <img
-            className="top-icon"
-            style={{
-              position: 'absolute',
-              top: '1rem',
-              right: '4rem',
-            }}
-            src={LinkedInIcon}
-            width={24}
-            height={24}
-          />
-        </div>
           <div
-            onClick={() => window.open('https://github.com/marshmelllo')}
+            onClick={() => window.open('https://github.com/shinpads')}
           >
           <img
             className="top-icon"
@@ -63,11 +48,10 @@ class TitleSection extends Component {
             color: '#fff',
             textAlign: 'center',
           }}>
-            UWaterloo Computer Engineering class of 2022 <br /> <br />
-            xxxx &nbsp; &#9679; &nbsp; yyyyy &nbsp; &#9679; &nbsp; zzzz &#9679; &nbsp; fffff
+            Software Engineer  <br /> <br />
           </div>
           <div style={{ marginTop: '4rem' }}>
-            <Button
+            {/*<Button
               className={classes.button}
               disableRipple
               variant="contained"
@@ -78,7 +62,7 @@ class TitleSection extends Component {
               }}
             >
               Learn more
-            </Button>
+            </Button>*/}
           </div>
       </div>
     )

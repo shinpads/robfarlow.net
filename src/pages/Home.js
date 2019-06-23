@@ -90,10 +90,10 @@ class Home extends Component {
         </div>
         <div style={{ height: '110vh' }} /> */}
         <TitleSection />
-        <About />
+        {/*<About />
         <Projects />
         <Games />
-        <Footer />
+        <Footer />*/}
         <div className={'page-loader' + (this.state.loading ? '' : ' not-loading')}>
           <Spinner />
         </div>
