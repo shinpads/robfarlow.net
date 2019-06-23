@@ -63,8 +63,8 @@ class TitleSection extends Component {
             color: '#fff',
             textAlign: 'center',
           }}>
-            Computer Engineering student <br />
-            studying at the University of Waterloo. <br />
+            UWaterloo Computer Engineering class of 2022 <br /> <br />
+            xxxx &nbsp; &#9679; &nbsp; yyyyy &nbsp; &#9679; &nbsp; zzzz &#9679; &nbsp; fffff
           </div>
           <div style={{ marginTop: '4rem' }}>
             <Button

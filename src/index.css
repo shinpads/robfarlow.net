@@ -321,6 +321,7 @@ svg {
   margin-left: 2rem;
   margin-right: 2rem;
   margin-bottom: 2rem;
+  max-width: 300px;
 }
 
 .flexbox {
