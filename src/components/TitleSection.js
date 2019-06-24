@@ -27,6 +27,8 @@ class TitleSection extends Component {
               position: 'absolute',
               top: '1rem',
               right: '1rem',
+              filter: 'invert(100%)',
+              opacity: 0.25,
             }}
             src={GithubIcon}
             width={24}
@@ -39,13 +41,13 @@ class TitleSection extends Component {
             fontSize: '42px',
             display: 'flex',
             alignItems: 'center',
-            color: 'white',
+            color: '#afafaf',
           }}>
             Rob Farlow
           </div>
-          <div className="hr" style={{ backgroundColor: 'white' }}/>
+          <div className="hr" style={{ backgroundColor: '#afafaf' }}/>
           <div style={{
-            color: '#fff',
+            color: '#afafaf',
             textAlign: 'center',
           }}>
             Software Engineer  <br /> <br />
