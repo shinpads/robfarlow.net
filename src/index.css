@@ -7,7 +7,7 @@ html, body {
 
 #parallax-container {
   display: block;
-  background-color: lightskyblue;
+  background: linear-gradient(#bbbbbb, #ffffff);
   clip: rect(auto, auto, auto, auto);
   position:absolute;
   left: 0;
