@@ -10,7 +10,7 @@
   <circle  cx="48" cy="41" r="11" fill="#fff"/>
   <circle  cx="62" cy="39" r="12" fill="#fff"/>
   <circle  cx="75" cy="49" r="11" fill="#fff"/>
-  <rect x="42" y="40" width="32" height="20" fill="#fff"/>
+  <rect x="41" y="40" width="32" height="20" fill="#fff"/>
 
 
 </svg>

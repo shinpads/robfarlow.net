@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Fade from 'react-reveal/Fade';
 import Flip from 'react-reveal/Flip';
+import { withStyles } from '@material-ui/core/styles';
 import { parseQuery } from '../util/helperFunctions';
 import $ from 'jquery';
 
@@ -18,6 +19,19 @@ import Games from '../components/Games';
 import Footer from '../components/Footer';
 import Spinner from '../components/Spinner';
 import CloudSvg from '../../public/cloud2.svg';
+
+const styles = {
+  bottomCloud: {
+    position: 'relative',
+    bottom: '250px',
+    maxWidth: '100vw',
+    overflow: 'hidden',
+    filter: 'blur(10px)',
+  },
+  mainTitle: {
+
+  },
+};
 
 class Home extends Component {
   constructor(props) {
@@ -49,6 +63,7 @@ class Home extends Component {
     }, 2500);
   }
   render() {
+    const { classes } = this.props;
     return (
       <div className="page-container">
         <div id="parallax-container">
@@ -68,12 +83,16 @@ class Home extends Component {
             <Mountain scale={1.2} style={{ top: '30%', left:'0%' }}/>
           </div>
           <div className="parallax-layer">
+          </div>
+          <div className="parallax-layer">
+            <div className={classes.mainTitle}>
 
+            </div>
           </div>
         </div>
-        <div style={{ minHeight: '170vh' }} />
-        <div>
-          <object style={{ width: '100%', height: '100%' }} data={CloudSvg} type="image/svg+xml">
+        <div style={{ minHeight: '100vh' }} />
+        <div className={classes.bottomCloud}>
+          <object style={{ width: '120%', height: '100%' }} data={CloudSvg} type="image/svg+xml">
             <img src={CloudSvg} />
           </object>
         </div>
@@ -90,4 +109,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default withStyles(styles)(Home);
