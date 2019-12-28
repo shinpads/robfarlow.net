@@ -145,7 +145,7 @@ export const Cloud = ({
 
   return (
     <div style={style}>
-      <div style={{ width: 'fit-content', height: 'fit-content' }} className="cloud">
+      <div style={{ width: '100%', height: '100%' }} className="cloud">
         <object style={{ width: '100%', height: '100%' }} data={CloudSvg} type="image/svg+xml">
           <img src={CloudSvg} />
         </object>
