@@ -22,6 +22,7 @@ import Spinner from '../components/Spinner';
 import CloudSvg from '../../public/cloud2.svg';
 
 const BASE_WIDTH = 1500;
+const BASE_HEIGHT = 900;
 
 const styles = {
   bottomCloud: {
@@ -72,7 +73,8 @@ class Home extends Component {
   }
   render() {
     const { classes } = this.props;
-    const scale = window.innerWidth / BASE_WIDTH;
+    const scale = Math.max( window.innerWidth / BASE_WIDTH, window.innerHeight / BASE_HEIGHT);
+    console.log(scale);
     return (
       <div className="page-container">
         <div id="parallax-container">
@@ -81,6 +83,7 @@ class Home extends Component {
           </div>
           <div className="parallax-layer">
             <Mountain scale={0.75} style={{ top: '30%', left:'20%', opacity: '0.5' }}/>
+            <Mountain scale={1.2 * scale} style={{ top: '30%', left:'0%' }}/>
           </div>
           <div className="parallax-layer">
             <Cloud style={{}} scale={2.8 * scale} />
@@ -89,10 +92,9 @@ class Home extends Component {
             <Cloud style={{ top: '8%', right: '60%' }} top={8} scale={2.5 * scale} />
           </div>
           <div className="parallax-layer">
-            <Mountain scale={1.2} style={{ top: '30%', left:'0%' }}/>
-          </div>
           <div className="parallax-layer">
-            <Snow />
+          </div>
+            { /* <Snow /> */}
           </div>
           <div className="parallax-layer">
             <div className={classes.mainTitle}>

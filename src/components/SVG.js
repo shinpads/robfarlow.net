@@ -173,6 +173,7 @@ export const Mountain = ({
 
 function getScale() {
   let scale = 1;
+  return 1;
   if (window.innerWidth < 800) {
     scale *= 1.5;
   }
